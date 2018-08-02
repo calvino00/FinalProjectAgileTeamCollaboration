@@ -99,8 +99,26 @@ namespace BelanjaLibrary
             return result;
         }
 
-       
-       
+
+        public int DeleteBarang(string kode)
+        {
+            int result = 0;
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(@"delete barang where kode = @kode", _conn))
+                {
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@kode", kode);
+                    result = cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
+
 
         public void Dispose()
         {
