@@ -10,7 +10,7 @@ namespace BelanjaLibrary
     {
         public string KodeBarang { get; set; }
         public string NamaBarang { get; set; }
-        public double HargaBarang { get; set; }
-        public double PajakBarang { get; set; }
+        public string HargaBarang { get; set; }
+        public string PajakBarang { get; set; }
     }
 }

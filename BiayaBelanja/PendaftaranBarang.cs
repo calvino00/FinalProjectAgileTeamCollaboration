@@ -49,9 +49,10 @@ namespace BiayaBelanja
                 barang = new Barang();
                 barang.KodeBarang = dao.GetKodeBarangBerikutnya();
                 barang.NamaBarang = this.tbNamaBrgBaru.Text;
-                barang.HargaBarang = Convert.ToDouble(this.tbHargaBrgBaru.Text);
-                barang.PajakBarang = Convert.ToDouble(this.tbPajakBrg.Text);
+                barang.HargaBarang = this.tbHargaBrgBaru.Text;
+                barang.PajakBarang = this.tbPajakBrg.Text;
                 dao.Insert(barang);
+                this.tbHargaBrgBaru.Text = this.tbNamaBrgBaru.Text = this.tbPajakBrg.Text = null;
                 this.Close();
                 
             }

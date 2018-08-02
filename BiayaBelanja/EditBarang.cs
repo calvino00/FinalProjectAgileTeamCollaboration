@@ -20,11 +20,16 @@ namespace BiayaBelanja
         public FrmEditBarang()
         {
             InitializeComponent();
+            this.dgvData.AutoGenerateColumns = false;
         }
 
         private void FrmEditBarang_Load(object sender, EventArgs e)
         {
-            
+            this.dgvData.DataSource = dao.GetAllDataBarang();
+            dgvData.Columns[0].DataPropertyName = "KodeBarang";
+            dgvData.Columns[1].DataPropertyName = "NamaBarang";
+            dgvData.Columns[2].DataPropertyName = "HargaBarang";
+            dgvData.Columns[3].DataPropertyName = "PajakBarang";
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
@@ -46,6 +51,36 @@ namespace BiayaBelanja
                     MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            
+        }
+
+        private void FrmEditBarang_Resize(object sender, EventArgs e)
+        {
+            this.dgvData.Columns[0].Width = 15 * this.dgvData.Width / 100;
+            this.dgvData.Columns[1].Width = 40 * this.dgvData.Width / 100;
+            this.dgvData.Columns[2].Width = 25 * this.dgvData.Width / 100;
+            this.dgvData.Columns[3].Width = 20 * this.dgvData.Width / 100;
+        }
+
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.tbNama.Text = dgvData.CurrentRow.Cells[1].Value.ToString();
+            this.tbHarga.Text = dgvData.CurrentRow.Cells[2].Value.ToString();
+            this.tbPajakBrg.Text = dgvData.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Barang baru = new Barang
+            {
+                KodeBarang = dgvData.CurrentRow.Cells[0].Value.ToString(),
+                NamaBarang = this.tbNama.Text,
+                HargaBarang = this.tbHarga.Text,
+                PajakBarang = this.tbPajakBrg.Text
+            };
+            dao.Update(baru);
+            this.dgvData.DataSource = null;
+            this.dgvData.DataSource = dao.GetAllDataBarang();
         }
     }
 }
