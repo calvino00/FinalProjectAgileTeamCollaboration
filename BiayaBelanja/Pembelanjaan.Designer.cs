@@ -245,7 +245,7 @@
             this.btnDaftar.BackColor = System.Drawing.Color.Yellow;
             this.btnDaftar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDaftar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDaftar.Location = new System.Drawing.Point(196, 676);
+            this.btnDaftar.Location = new System.Drawing.Point(196, 674);
             this.btnDaftar.Name = "btnDaftar";
             this.btnDaftar.Size = new System.Drawing.Size(143, 47);
             this.btnDaftar.TabIndex = 22;
