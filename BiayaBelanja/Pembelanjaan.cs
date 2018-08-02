@@ -13,13 +13,14 @@ namespace BiayaBelanja
     public partial class FrmPembelanjaan : Form
     {
         FrmPendaftaranBarang daftar = new FrmPendaftaranBarang();
-       // FrmPembelanjaan frmBelanja = new FrmPembelanjaan();
+        FrmEditBarang FrmEdit = new FrmEditBarang();
         public FrmPembelanjaan()
         {
             InitializeComponent();
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            FrmEdit.ShowDialog();
         }
 
         private void btnDaftar_Click(object sender, EventArgs e)

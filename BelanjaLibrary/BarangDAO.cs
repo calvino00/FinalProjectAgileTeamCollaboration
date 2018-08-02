@@ -88,7 +88,7 @@ namespace BelanjaLibrary
                 }
                 else
                 {
-                    int lastNumber = Convert.ToInt32(nomorBarangTerakhir.Substring(9));
+                    int lastNumber = Convert.ToInt32(nomorBarangTerakhir.Substring(4));
                     result = $"N{(lastNumber + 1).ToString("0000")}";
                 }
             }
@@ -105,10 +105,10 @@ namespace BelanjaLibrary
             int result = 0;
             try
             {
-                using (SqlCommand cmd = new SqlCommand(@"delete barang where kode = @kode", _conn))
+                using (SqlCommand cmd = new SqlCommand(@"delete TambahBarang where KodeBarang = @KodeBarang", _conn))
                 {
                     cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@kode", kode);
+                    cmd.Parameters.AddWithValue("@KodeBarang", kode);
                     result = cmd.ExecuteNonQuery();
                 }
             }
@@ -118,7 +118,67 @@ namespace BelanjaLibrary
             }
             return result;
         }
+        List<Barang> listData = null;
+        public List<Barang> GetAllDataBarang()
+        {
 
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = _conn;
+                    cmd.CommandText = @"select * from TambahBarang order by KodeBarang";
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            listData = new List<Barang>();
+                            while (reader.Read())
+                            {
+                                listData.Add(new Barang
+                                {
+                                    KodeBarang = reader["KodeBarang"].ToString(),
+                                    NamaBarang = reader["NamaBarang"].ToString(),
+                                    PajakBarang = reader["Pajak"].ToString(),
+                                    HargaBarang = reader["Harga"].ToString()
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return listData;
+        }
+
+        public int Update(Barang barang)
+        {
+            int result = 0;
+            try
+            {
+                string sqlString =
+                    @"update TambahBarang set NamaBarang = @NamaBarang , Pajak = @Pajak , Harga = @Harga where KodeBarang = @KodeBarang";
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = _conn;
+                    cmd.CommandText = sqlString;
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@KodeBarang", barang.KodeBarang);
+                    cmd.Parameters.AddWithValue("@NamaBarang", barang.NamaBarang);
+                    cmd.Parameters.AddWithValue("@Pajak", barang.PajakBarang);
+                    cmd.Parameters.AddWithValue("@Harga", barang.HargaBarang);
+                    result = cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
 
         public void Dispose()
         {

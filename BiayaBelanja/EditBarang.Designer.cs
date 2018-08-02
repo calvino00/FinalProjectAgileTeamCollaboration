@@ -53,9 +53,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.192F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(128, 20);
+            this.label3.Location = new System.Drawing.Point(192, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(487, 47);
+            this.label3.Size = new System.Drawing.Size(762, 74);
             this.label3.TabIndex = 5;
             this.label3.Text = "PENGEDITAN BARANG";
             // 
@@ -63,36 +64,40 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 90);
+            this.label4.Location = new System.Drawing.Point(18, 141);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(406, 29);
+            this.label4.Size = new System.Drawing.Size(617, 42);
             this.label4.TabIndex = 7;
             this.label4.Text = "Edit Barang yang Sudah Terdaftar";
             // 
             // tbHarga
             // 
             this.tbHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHarga.Location = new System.Drawing.Point(237, 533);
+            this.tbHarga.Location = new System.Drawing.Point(356, 833);
+            this.tbHarga.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbHarga.Name = "tbHarga";
             this.tbHarga.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbHarga.Size = new System.Drawing.Size(224, 34);
+            this.tbHarga.Size = new System.Drawing.Size(334, 49);
             this.tbHarga.TabIndex = 12;
             // 
             // tbNama
             // 
             this.tbNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNama.Location = new System.Drawing.Point(237, 478);
+            this.tbNama.Location = new System.Drawing.Point(356, 747);
+            this.tbNama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNama.Name = "tbNama";
-            this.tbNama.Size = new System.Drawing.Size(224, 34);
+            this.tbNama.Size = new System.Drawing.Size(334, 49);
             this.tbNama.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 533);
+            this.label2.Location = new System.Drawing.Point(48, 833);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 29);
+            this.label2.Size = new System.Drawing.Size(125, 42);
             this.label2.TabIndex = 10;
             this.label2.Text = "Harga";
             // 
@@ -100,9 +105,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 478);
+            this.label1.Location = new System.Drawing.Point(48, 747);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 29);
+            this.label1.Size = new System.Drawing.Size(121, 42);
             this.label1.TabIndex = 9;
             this.label1.Text = "Nama";
             // 
@@ -112,9 +118,10 @@
             this.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBatal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBatal.Location = new System.Drawing.Point(637, 692);
+            this.btnBatal.Location = new System.Drawing.Point(956, 1081);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(143, 47);
+            this.btnBatal.Size = new System.Drawing.Size(214, 73);
             this.btnBatal.TabIndex = 13;
             this.btnBatal.Text = "BATAL";
             this.btnBatal.UseVisualStyleBackColor = false;
@@ -125,12 +132,14 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEdit.Location = new System.Drawing.Point(573, 535);
+            this.btnEdit.Location = new System.Drawing.Point(860, 836);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(143, 47);
+            this.btnEdit.Size = new System.Drawing.Size(214, 73);
             this.btnEdit.TabIndex = 14;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // dgvData
             // 
@@ -140,11 +149,13 @@
             this.Nama,
             this.Harga,
             this.Pajak});
-            this.dgvData.Location = new System.Drawing.Point(17, 134);
+            this.dgvData.Location = new System.Drawing.Point(26, 209);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowTemplate.Height = 24;
-            this.dgvData.Size = new System.Drawing.Size(763, 318);
+            this.dgvData.Size = new System.Drawing.Size(1144, 497);
             this.dgvData.TabIndex = 15;
+            this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
             // Kode
             // 
@@ -171,9 +182,10 @@
             this.btnHapus.BackColor = System.Drawing.SystemColors.Window;
             this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHapus.Location = new System.Drawing.Point(573, 478);
+            this.btnHapus.Location = new System.Drawing.Point(860, 747);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(143, 47);
+            this.btnHapus.Size = new System.Drawing.Size(214, 73);
             this.btnHapus.TabIndex = 16;
             this.btnHapus.Text = "HAPUS";
             this.btnHapus.UseVisualStyleBackColor = false;
@@ -183,19 +195,21 @@
             // 
             this.tbPajakBrg.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tbPajakBrg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPajakBrg.Location = new System.Drawing.Point(237, 591);
+            this.tbPajakBrg.Location = new System.Drawing.Point(356, 923);
+            this.tbPajakBrg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPajakBrg.Name = "tbPajakBrg";
             this.tbPajakBrg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbPajakBrg.Size = new System.Drawing.Size(224, 34);
+            this.tbPajakBrg.Size = new System.Drawing.Size(334, 49);
             this.tbPajakBrg.TabIndex = 20;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(31, 594);
+            this.label6.Location = new System.Drawing.Point(46, 928);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 29);
+            this.label6.Size = new System.Drawing.Size(277, 42);
             this.label6.TabIndex = 19;
             this.label6.Text = "Pajak / Barang";
             // 
@@ -205,9 +219,10 @@
             this.btnBelanja.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBelanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBelanja.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnBelanja.Location = new System.Drawing.Point(470, 692);
+            this.btnBelanja.Location = new System.Drawing.Point(705, 1081);
+            this.btnBelanja.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBelanja.Name = "btnBelanja";
-            this.btnBelanja.Size = new System.Drawing.Size(143, 47);
+            this.btnBelanja.Size = new System.Drawing.Size(214, 73);
             this.btnBelanja.TabIndex = 21;
             this.btnBelanja.Text = "BELANJA";
             this.btnBelanja.UseVisualStyleBackColor = false;
@@ -217,18 +232,19 @@
             this.btnDaftar.BackColor = System.Drawing.Color.Yellow;
             this.btnDaftar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDaftar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDaftar.Location = new System.Drawing.Point(302, 692);
+            this.btnDaftar.Location = new System.Drawing.Point(453, 1081);
+            this.btnDaftar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDaftar.Name = "btnDaftar";
-            this.btnDaftar.Size = new System.Drawing.Size(143, 47);
+            this.btnDaftar.Size = new System.Drawing.Size(214, 73);
             this.btnDaftar.TabIndex = 23;
             this.btnDaftar.Text = "DAFTAR";
             this.btnDaftar.UseVisualStyleBackColor = false;
             // 
             // FrmEditBarang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 763);
+            this.ClientSize = new System.Drawing.Size(1200, 1192);
             this.Controls.Add(this.btnDaftar);
             this.Controls.Add(this.btnBelanja);
             this.Controls.Add(this.tbPajakBrg);
@@ -243,9 +259,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmEditBarang";
             this.Text = "PENGEDITAN BARANG";
             this.Load += new System.EventHandler(this.FrmEditBarang_Load);
+            this.Resize += new System.EventHandler(this.FrmEditBarang_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
