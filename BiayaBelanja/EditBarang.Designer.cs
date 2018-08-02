@@ -55,7 +55,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.192F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(128, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(498, 48);
+            this.label3.Size = new System.Drawing.Size(487, 47);
             this.label3.TabIndex = 5;
             this.label3.Text = "PENGEDITAN BARANG";
             // 
@@ -65,7 +65,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(427, 29);
+            this.label4.Size = new System.Drawing.Size(406, 29);
             this.label4.TabIndex = 7;
             this.label4.Text = "Edit Barang yang Sudah Terdaftar";
             // 
@@ -75,7 +75,7 @@
             this.tbHarga.Location = new System.Drawing.Point(237, 533);
             this.tbHarga.Name = "tbHarga";
             this.tbHarga.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbHarga.Size = new System.Drawing.Size(224, 35);
+            this.tbHarga.Size = new System.Drawing.Size(224, 34);
             this.tbHarga.TabIndex = 12;
             // 
             // tbNama
@@ -83,7 +83,7 @@
             this.tbNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNama.Location = new System.Drawing.Point(237, 478);
             this.tbNama.Name = "tbNama";
-            this.tbNama.Size = new System.Drawing.Size(224, 35);
+            this.tbNama.Size = new System.Drawing.Size(224, 34);
             this.tbNama.TabIndex = 11;
             // 
             // label2
@@ -92,7 +92,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(32, 533);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 29);
+            this.label2.Size = new System.Drawing.Size(83, 29);
             this.label2.TabIndex = 10;
             this.label2.Text = "Harga";
             // 
@@ -102,7 +102,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 478);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 29);
+            this.label1.Size = new System.Drawing.Size(81, 29);
             this.label1.TabIndex = 9;
             this.label1.Text = "Nama";
             // 
@@ -177,6 +177,7 @@
             this.btnHapus.TabIndex = 16;
             this.btnHapus.Text = "HAPUS";
             this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // tbPajakBrg
             // 
@@ -185,7 +186,7 @@
             this.tbPajakBrg.Location = new System.Drawing.Point(237, 591);
             this.tbPajakBrg.Name = "tbPajakBrg";
             this.tbPajakBrg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbPajakBrg.Size = new System.Drawing.Size(224, 35);
+            this.tbPajakBrg.Size = new System.Drawing.Size(224, 34);
             this.tbPajakBrg.TabIndex = 20;
             // 
             // label6
@@ -194,7 +195,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(31, 594);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 29);
+            this.label6.Size = new System.Drawing.Size(183, 29);
             this.label6.TabIndex = 19;
             this.label6.Text = "Pajak / Barang";
             // 
