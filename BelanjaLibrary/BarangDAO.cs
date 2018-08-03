@@ -179,7 +179,41 @@ namespace BelanjaLibrary
             }
             return result;
         }
+        public Barang GetNamaBarang(string NamaBarang)
+        {
+            Barang result = null;
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(@"select * from TambahBarang where NamaBarang = @NamaBarang", _conn))
+                {
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@NamaBarang", NamaBarang);
 
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                result = new Barang
+                                {
+                                    KodeBarang = reader["KodeBarang"].ToString(),
+                                    NamaBarang = reader["NamaBarang"].ToString(),
+                                    PajakBarang = reader["Pajak"].ToString(),
+                                    HargaBarang = reader["Harga"].ToString()
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+
+        }
         public void Dispose()
         {
             if (_conn != null) _conn.Close();
