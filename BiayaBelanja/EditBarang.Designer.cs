@@ -44,7 +44,6 @@
             this.btnHapus = new System.Windows.Forms.Button();
             this.tbPajakBrg = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnBelanja = new System.Windows.Forms.Button();
             this.btnDaftar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -112,12 +111,13 @@
             this.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBatal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBatal.Location = new System.Drawing.Point(637, 692);
+            this.btnBatal.Location = new System.Drawing.Point(573, 692);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(143, 47);
             this.btnBatal.TabIndex = 13;
             this.btnBatal.Text = "BATAL";
             this.btnBatal.UseVisualStyleBackColor = false;
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // btnEdit
             // 
@@ -131,6 +131,7 @@
             this.btnEdit.TabIndex = 14;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // dgvData
             // 
@@ -145,6 +146,7 @@
             this.dgvData.RowTemplate.Height = 24;
             this.dgvData.Size = new System.Drawing.Size(763, 318);
             this.dgvData.TabIndex = 15;
+            this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
             // Kode
             // 
@@ -199,38 +201,25 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Pajak / Barang";
             // 
-            // btnBelanja
-            // 
-            this.btnBelanja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnBelanja.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBelanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBelanja.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnBelanja.Location = new System.Drawing.Point(470, 692);
-            this.btnBelanja.Name = "btnBelanja";
-            this.btnBelanja.Size = new System.Drawing.Size(143, 47);
-            this.btnBelanja.TabIndex = 21;
-            this.btnBelanja.Text = "BELANJA";
-            this.btnBelanja.UseVisualStyleBackColor = false;
-            // 
             // btnDaftar
             // 
             this.btnDaftar.BackColor = System.Drawing.Color.Yellow;
             this.btnDaftar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDaftar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDaftar.Location = new System.Drawing.Point(302, 692);
+            this.btnDaftar.Location = new System.Drawing.Point(391, 692);
             this.btnDaftar.Name = "btnDaftar";
             this.btnDaftar.Size = new System.Drawing.Size(143, 47);
             this.btnDaftar.TabIndex = 23;
             this.btnDaftar.Text = "DAFTAR";
             this.btnDaftar.UseVisualStyleBackColor = false;
+            this.btnDaftar.Click += new System.EventHandler(this.btnDaftar_Click);
             // 
             // FrmEditBarang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 763);
+            this.ClientSize = new System.Drawing.Size(800, 793);
             this.Controls.Add(this.btnDaftar);
-            this.Controls.Add(this.btnBelanja);
             this.Controls.Add(this.tbPajakBrg);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnHapus);
@@ -246,6 +235,7 @@
             this.Name = "FrmEditBarang";
             this.Text = "PENGEDITAN BARANG";
             this.Load += new System.EventHandler(this.FrmEditBarang_Load);
+            this.Resize += new System.EventHandler(this.FrmEditBarang_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,7 +260,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
         private System.Windows.Forms.DataGridViewTextBoxColumn Harga;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pajak;
-        private System.Windows.Forms.Button btnBelanja;
         private System.Windows.Forms.Button btnDaftar;
     }
 }
