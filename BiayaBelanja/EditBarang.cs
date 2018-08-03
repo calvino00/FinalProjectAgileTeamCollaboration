@@ -12,7 +12,7 @@ using BelanjaLibrary;
 namespace BiayaBelanja
 {
     
-    public partial class FrmEditBarang : Form
+    public partial class FrmEditBarang : Form   
     {
         BarangDAO dao = new BarangDAO(Setting.GetConnectionString());
         public FrmEditBarang()
@@ -79,6 +79,19 @@ namespace BiayaBelanja
             dao.Update(baru);
             this.dgvData.DataSource = null;
             this.dgvData.DataSource = dao.GetAllDataBarang();
+        }
+
+        private void btnDaftar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmPendaftaranBarang daftar = new FrmPendaftaranBarang();
+            daftar.ShowDialog();
+            this.Close();
+        }
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
