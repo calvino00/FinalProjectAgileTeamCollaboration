@@ -88,8 +88,7 @@ namespace BelanjaLibrary
                 }
                 else
                 {
-                    int lastNumber = Convert.ToInt32(nomorBarangTerakhir.Substring(4));
-                    result = $"N{(lastNumber + 1).ToString("0000")}";
+                    result = $"N{(Convert.ToInt32(nomorBarangTerakhir.Substring(4)) + 1).ToString("0000")}";
                 }
             }
             catch (Exception ex)
