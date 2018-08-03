@@ -73,6 +73,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting.cs" />
+    <EmbeddedResource Include="BonBarang.resx">
+      <DependentUpon>BonBarang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditBarang.resx">
       <DependentUpon>EditBarang.cs</DependentUpon>
     </EmbeddedResource>
