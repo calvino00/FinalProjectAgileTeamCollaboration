@@ -43,14 +43,14 @@
             this.tbTotalHarga = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lvBarang = new System.Windows.Forms.ListView();
-            this.tbNamaBrg = new System.Windows.Forms.TextBox();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDaftar = new System.Windows.Forms.Button();
             this.Nama = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Harga = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Pajak = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Qty = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tbNamaBrg = new System.Windows.Forms.TextBox();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDaftar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -231,6 +231,24 @@
             this.lvBarang.UseCompatibleStateImageBehavior = false;
             this.lvBarang.View = System.Windows.Forms.View.Details;
             // 
+            // Nama
+            // 
+            this.Nama.Text = "Nama";
+            this.Nama.Width = 125;
+            // 
+            // Harga
+            // 
+            this.Harga.Text = "Harga";
+            this.Harga.Width = 75;
+            // 
+            // Pajak
+            // 
+            this.Pajak.Text = "Pajak";
+            // 
+            // Qty
+            // 
+            this.Qty.Text = "Qty";
+            // 
             // tbNamaBrg
             // 
             this.tbNamaBrg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,26 +301,6 @@
             this.btnDaftar.Text = "DAFTAR";
             this.btnDaftar.UseVisualStyleBackColor = false;
             this.btnDaftar.Click += new System.EventHandler(this.btnDaftar_Click);
-            // 
-            // Nama
-            // 
-            this.Nama.Text = "Nama";
-            this.Nama.Width = 100;
-            // 
-            // Harga
-            // 
-            this.Harga.Text = "Harga";
-            this.Harga.Width = 50;
-            // 
-            // Pajak
-            // 
-            this.Pajak.Text = "Pajak";
-            this.Pajak.Width = 50;
-            // 
-            // Qty
-            // 
-            this.Qty.Text = "Qty";
-            this.Qty.Width = 50;
             // 
             // FrmPembelanjaan
             // 
