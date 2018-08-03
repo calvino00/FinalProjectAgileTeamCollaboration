@@ -11,7 +11,7 @@ namespace BelanjaLibrary
     public class BarangDAO : IDisposable
     {
         SqlConnection _conn = null;
-       
+
         public BarangDAO(string connectionString)
         {
             try
@@ -38,8 +38,8 @@ namespace BelanjaLibrary
                     cmd.Transaction = trans;
                     cmd.CommandText = @"Insert into TambahBarang values (@KodeBarang, @NamaBarang, @Pajak, @Harga)";
                     cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@KodeBarang",barang.KodeBarang);
-                    cmd.Parameters.AddWithValue("@NamaBarang",barang.NamaBarang);
+                    cmd.Parameters.AddWithValue("@KodeBarang", barang.KodeBarang);
+                    cmd.Parameters.AddWithValue("@NamaBarang", barang.NamaBarang);
                     cmd.Parameters.AddWithValue("@Pajak", barang.PajakBarang);
                     cmd.Parameters.AddWithValue("@Harga", barang.HargaBarang);
                     result = cmd.ExecuteNonQuery();

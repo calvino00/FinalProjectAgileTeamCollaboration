@@ -14,7 +14,9 @@ namespace BiayaBelanja
     
     public partial class FrmEditBarang : Form   
     {
+        
         BarangDAO dao = new BarangDAO(Setting.GetConnectionString());
+
         public FrmEditBarang()
         {
             InitializeComponent();
