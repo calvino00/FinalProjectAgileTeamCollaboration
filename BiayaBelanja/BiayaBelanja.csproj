@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BonBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BonBarang.Designer.cs">
+      <DependentUpon>BonBarang.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditBarang.cs">
       <SubType>Form</SubType>
     </Compile>
