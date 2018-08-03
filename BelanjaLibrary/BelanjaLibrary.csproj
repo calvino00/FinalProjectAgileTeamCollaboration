@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Barang.cs" />
     <Compile Include="BarangDAO.cs" />
+    <Compile Include="BarangPenjualan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
