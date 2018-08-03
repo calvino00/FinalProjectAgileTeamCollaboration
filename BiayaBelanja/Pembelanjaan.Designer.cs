@@ -166,6 +166,7 @@
             this.tbPajakTransaksi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbPajakTransaksi.Size = new System.Drawing.Size(224, 35);
             this.tbPajakTransaksi.TabIndex = 16;
+            this.tbPajakTransaksi.Visible = false;
             // 
             // label6
             // 
@@ -176,6 +177,7 @@
             this.label6.Size = new System.Drawing.Size(225, 29);
             this.label6.TabIndex = 15;
             this.label6.Text = "Pajak / Transaksi";
+            this.label6.Visible = false;
             // 
             // tbTotalHarga
             // 
@@ -187,6 +189,8 @@
             this.tbTotalHarga.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbTotalHarga.Size = new System.Drawing.Size(224, 35);
             this.tbTotalHarga.TabIndex = 18;
+            this.tbTotalHarga.Visible = false;
+            this.tbTotalHarga.WordWrap = false;
             // 
             // label7
             // 
