@@ -12,7 +12,9 @@ using BelanjaLibrary;
 namespace BiayaBelanja
 {
     public partial class FrmPendaftaranBarang : Form
+        
     {
+        FrmPembelanjaan belanja = new FrmPembelanjaan();
         BarangDAO dao = new BarangDAO(Setting.GetConnectionString());
         public FrmPendaftaranBarang()
         {
