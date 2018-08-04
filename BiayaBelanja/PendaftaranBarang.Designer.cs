@@ -48,7 +48,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(25, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 29);
+            this.label1.Size = new System.Drawing.Size(85, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nama";
             // 
@@ -58,7 +58,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(25, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 29);
+            this.label2.Size = new System.Drawing.Size(86, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Harga";
             // 
@@ -68,7 +68,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.192F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(60, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(667, 47);
+            this.label3.Size = new System.Drawing.Size(682, 48);
             this.label3.TabIndex = 2;
             this.label3.Text = "PERHITUNGAN BIAYA BELANJA";
             // 
@@ -78,7 +78,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(25, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(298, 29);
+            this.label4.Size = new System.Drawing.Size(314, 29);
             this.label4.TabIndex = 3;
             this.label4.Text = "Input Harga Barang Baru";
             // 
@@ -87,8 +87,9 @@
             this.tbNamaBrgBaru.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNamaBrgBaru.Location = new System.Drawing.Point(231, 141);
             this.tbNamaBrgBaru.Name = "tbNamaBrgBaru";
-            this.tbNamaBrgBaru.Size = new System.Drawing.Size(224, 34);
+            this.tbNamaBrgBaru.Size = new System.Drawing.Size(224, 35);
             this.tbNamaBrgBaru.TabIndex = 4;
+            this.tbNamaBrgBaru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNamaBrgBaru_KeyPress);
             // 
             // tbHargaBrgBaru
             // 
@@ -96,8 +97,10 @@
             this.tbHargaBrgBaru.Location = new System.Drawing.Point(231, 196);
             this.tbHargaBrgBaru.Name = "tbHargaBrgBaru";
             this.tbHargaBrgBaru.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbHargaBrgBaru.Size = new System.Drawing.Size(224, 34);
+            this.tbHargaBrgBaru.Size = new System.Drawing.Size(224, 35);
             this.tbHargaBrgBaru.TabIndex = 5;
+            this.tbHargaBrgBaru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHargaBrgBaru_KeyPress);
+            this.tbHargaBrgBaru.Leave += new System.EventHandler(this.tbHargaBrgBaru_Leave);
             // 
             // btnDaftar
             // 
@@ -146,7 +149,7 @@
             this.tbPajakBrg.Location = new System.Drawing.Point(231, 255);
             this.tbPajakBrg.Name = "tbPajakBrg";
             this.tbPajakBrg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbPajakBrg.Size = new System.Drawing.Size(224, 34);
+            this.tbPajakBrg.Size = new System.Drawing.Size(224, 35);
             this.tbPajakBrg.TabIndex = 18;
             // 
             // label6
@@ -155,7 +158,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.824F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(25, 258);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 29);
+            this.label6.Size = new System.Drawing.Size(193, 29);
             this.label6.TabIndex = 17;
             this.label6.Text = "Pajak / Barang";
             // 
