@@ -95,5 +95,66 @@ namespace BiayaBelanja
         {
             this.Close();
         }
+
+        private void tbNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == ' ')
+            {
+                e.Handled = false;
+            }
+            else
+            {
+
+                e.Handled = true;
+            }
+        }
+
+        private void tbHarga_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+
+                e.Handled = true;
+            }
+        }
+
+        private void tbPajakBrg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+
+                e.Handled = true;
+            }
+        }
+
+        private void tbPajakBrg_TextChanged(object sender, EventArgs e)
+        {
+            decimal temp = 0;
+            if (this.tbPajakBrg.Text != "")
+            {
+                temp = Convert.ToDecimal(this.tbPajakBrg.Text);
+                if (temp >= 100)
+                {
+                    this.tbPajakBrg.Text = Convert.ToDecimal(100).ToString("n0");
+                }
+                else
+                {
+                    this.tbPajakBrg.Text = temp.ToString("n0");
+                }
+                this.tbPajakBrg.SelectionStart = this.tbPajakBrg.Text.Length;
+            }
+            else
+            {
+                tbPajakBrg.Text = "0";
+            }
+        }
     }
 }
