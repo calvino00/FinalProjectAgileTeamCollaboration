@@ -13,7 +13,7 @@ namespace BiayaBelanja
 {
     public partial class FrmPembelanjaan : Form
     {
-        List<BarangPenjualan> listData = null;
+       // List<BarangPenjualan> listData = null;
         int hasil = 0;
 
         public FrmPembelanjaan()
@@ -39,9 +39,10 @@ namespace BiayaBelanja
         }
 
         Barang result = null;
+        List<BarangPenjualan> listData = new List<BarangPenjualan>();
         private void btnOK_Click(object sender, EventArgs e)
         {
-            listData = new List<BarangPenjualan>();
+            
             listData.Add(
                 new BarangPenjualan
                 {
@@ -57,6 +58,7 @@ namespace BiayaBelanja
             string hasill = (hasil + Convert.ToInt32(hasilpajak) + Convert.ToInt32(hasilharga)).ToString();
             hasil = Convert.ToInt32(hasill);
             tbTotalHarga.Text = (Convert.ToInt32(hasil)).ToString();
+            lvBarang.Items.Clear();
             foreach (var jenis in listData)
             {
                 ListViewItem item = new ListViewItem(jenis.NamaBarang);
@@ -95,6 +97,8 @@ namespace BiayaBelanja
 
         private void btnKonfirmasi_Click(object sender, EventArgs e)
         {
+            BonBarang bon = new BonBarang(listData,tbTotalHarga.Text);
+            bon.ShowDialog();
         }
 
         private void tbSubTotal_TextChanged(object sender, EventArgs e)
