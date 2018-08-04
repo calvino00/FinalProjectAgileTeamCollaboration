@@ -12,8 +12,9 @@ using BelanjaLibrary;
 namespace BiayaBelanja
 {
     public partial class FrmPendaftaranBarang : Form
-        
+
     {
+
         FrmPembelanjaan belanja = new FrmPembelanjaan();
         BarangDAO dao = new BarangDAO(Setting.GetConnectionString());
         public FrmPendaftaranBarang()
@@ -21,7 +22,7 @@ namespace BiayaBelanja
             InitializeComponent();
         }
 
-        
+
 
         private void btnBelanja_Click(object sender, EventArgs e)
         {
@@ -46,6 +47,7 @@ namespace BiayaBelanja
                 MessageBox.Show("Sorry , pajak barang wajib isi ...");
                 this.tbPajakBrg.Focus();
             }
+
             else
             {
                 barang = new Barang();
@@ -56,9 +58,9 @@ namespace BiayaBelanja
                 dao.Insert(barang);
                 this.tbHargaBrgBaru.Text = this.tbNamaBrgBaru.Text = this.tbPajakBrg.Text = null;
                 this.Close();
-                
+
             }
-            
+
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
@@ -68,7 +70,44 @@ namespace BiayaBelanja
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FrmEditBarang edit = new FrmEditBarang();
+            edit.ShowDialog();
+            this.Close();
         }
+
+        private void tbNamaBrgBaru_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (' '))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbHargaBrgBaru_Leave(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(this.tbHargaBrgBaru.Text) <= 0)
+            {
+                MessageBox.Show("Input angka yang benar", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void tbHargaBrgBaru_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == ' ')
+            {
+                e.Handled = false;
+            }
+            else
+            {   
+
+                e.Handled = true;
+            }
+        }
+
     }
 }
