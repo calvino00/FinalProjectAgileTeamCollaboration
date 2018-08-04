@@ -106,5 +106,31 @@ namespace BiayaBelanja
         {
             this.Close();
         }
+
+        private void tbNamaBrg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == ' ')
+            {
+                e.Handled = false;
+            }
+            else
+            {
+
+                e.Handled = true;
+            }
+        }
+
+        private void tbQty_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+
+                e.Handled = true;
+            }
+        }
     }
 }

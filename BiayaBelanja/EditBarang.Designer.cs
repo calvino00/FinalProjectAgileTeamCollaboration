@@ -76,6 +76,7 @@
             this.tbHarga.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbHarga.Size = new System.Drawing.Size(224, 34);
             this.tbHarga.TabIndex = 12;
+            this.tbHarga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHarga_KeyPress);
             // 
             // tbNama
             // 
@@ -84,6 +85,7 @@
             this.tbNama.Name = "tbNama";
             this.tbNama.Size = new System.Drawing.Size(224, 34);
             this.tbNama.TabIndex = 11;
+            this.tbNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNama_KeyPress);
             // 
             // label2
             // 
@@ -190,6 +192,8 @@
             this.tbPajakBrg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbPajakBrg.Size = new System.Drawing.Size(224, 34);
             this.tbPajakBrg.TabIndex = 20;
+            this.tbPajakBrg.TextChanged += new System.EventHandler(this.tbPajakBrg_TextChanged);
+            this.tbPajakBrg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPajakBrg_KeyPress);
             // 
             // label6
             // 
